@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fd9bc269-2b35-4b20-af03-5263cebe5a19" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.PacketSystem/.idea/.idea.PacketSystem.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.PacketSystem/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.PacketSystem/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.PacketSystem/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.PacketSystem/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.PacketSystem/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.PacketSystem/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PacketSystem.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PacketSystem.sln.DotSettings.user" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PacketSystem/Packet.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PacketSystem/PacketSystem.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PacketSystem/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PacketSystem/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PacketTest/PacketTest.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PacketTest/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PacketTest/Tests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PacketTest/packages.config" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/PacketTest/Tests.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/e6/2ea392b0/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/e5/42cdbaea/Type.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PacketSystem/Packet.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$USER_HOME$/AppData/Local/Symbols/src/nunit/nunit/c933a883ea25263ec575a654dae69fa38000edd9/src/NUnitFramework/framework/Internal/Reflect.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/26BACF2A-B3E7-4E5B-9AB6-134973DBE886/9d/8945b8cb/List`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/a0/da1ebf19/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/PacketSystem/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/BD1B6EA4-F54D-4146-A29C-2A12CD6EC436/c9/2c8abac9/RuntimeType.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/PacketTest/Tests.cs" />
+        <option value="$PROJECT_DIR$/PacketSystem/Packet.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1eMOYO3bM7o5BEvRgzs7raUMHtJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30010834" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager" selected=".NET Project.PacketSystem">
+    <configuration name="PacketSystem" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/PacketSystem/PacketSystem.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="Console" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fd9bc269-2b35-4b20-af03-5263cebe5a19" name="Default Changelist" comment="" />
+      <created>1594128041853</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594128041853</updated>
+      <workItem from="1594128053692" duration="1478000" />
+      <workItem from="1594129586129" duration="9961000" />
+    </task>
+    <servers />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="605" height="464" key="DebuggerActiveHint" timestamp="1594138817840">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="605" height="464" key="DebuggerActiveHint/0.0.1920.1040@0.0.1920.1040" timestamp="1594138817840" />
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state width="1877" height="375" key="GridCell.Tab.0.center" timestamp="1594139470510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470510" />
+    <state width="1877" height="375" key="GridCell.Tab.0.left" timestamp="1594139470510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470510" />
+    <state width="1877" height="375" key="GridCell.Tab.0.right" timestamp="1594139470510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470510" />
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state width="1877" height="375" key="GridCell.Tab.1.center" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state width="1877" height="375" key="GridCell.Tab.1.left" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state width="1877" height="375" key="GridCell.Tab.1.right" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state width="1877" height="375" key="GridCell.Tab.2.center" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state width="1877" height="375" key="GridCell.Tab.2.left" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state width="1877" height="375" key="GridCell.Tab.2.right" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state width="1877" height="375" key="GridCell.Tab.3.center" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state width="1877" height="375" key="GridCell.Tab.3.left" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state width="1877" height="375" key="GridCell.Tab.3.right" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.3.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state width="1877" height="375" key="GridCell.Tab.4.bottom" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.4.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state width="1877" height="375" key="GridCell.Tab.4.center" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.4.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state width="1877" height="375" key="GridCell.Tab.4.left" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.4.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state width="1877" height="375" key="GridCell.Tab.4.right" timestamp="1594139470511">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="375" key="GridCell.Tab.4.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594139470511" />
+    <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size" timestamp="1594128269782">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Rider.ProjectTemplateDialog.Size/0.0.1920.1040@0.0.1920.1040" timestamp="1594128269782" />
+    <state x="794" y="221" key="RiderGenerateDialog" timestamp="1594132809312">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="221" key="RiderGenerateDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1594132809312" />
+    <state width="968" height="528" key="XDebugger.FullValuePopup" timestamp="1594139002567">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="968" height="528" key="XDebugger.FullValuePopup/0.0.1920.1040@0.0.1920.1040" timestamp="1594139002567" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/PacketSystem/Packet.cs</url>
+          <line>194</line>
+          <properties documentPath="$PROJECT_DIR$/PacketSystem/Packet.cs" initialLine="184">
+            <startOffsets>
+              <option value="5280" />
+            </startOffsets>
+            <endOffsets>
+              <option value="5301" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/PacketSystem/Packet.cs</url>
+          <line>41</line>
+          <properties documentPath="$PROJECT_DIR$/PacketSystem/Packet.cs" initialLine="41">
+            <startOffsets>
+              <option value="1044" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1062" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
