@@ -10,13 +10,15 @@ namespace GnarlyGames.Serializers
         private byte[] _buffer;
         private int _readIndex = 0;
         private int _writeIndex = 0;
-        public int _capacity = 16;
-        private const int _defaultCapacity = 16;
+        private int _capacity;
+        private const int DefaultCapacity = 16;
+
+        public bool Empty => _buffer.Length == 0;
+        public bool HasMore => _buffer.Length > _readIndex;
 
         public BridgeStream()
         {
-            _buffer = new byte[_defaultCapacity];
-            _capacity = _defaultCapacity;
+            Clear();
         }
 
         public BridgeStream(byte[] data)
@@ -25,27 +27,11 @@ namespace GnarlyGames.Serializers
             _capacity = _buffer.Length;
         }
 
-        public bool Empty => _buffer.Length == 0;
-
-        public bool HasMore => _buffer.Length > _readIndex;
-
-        public static implicit operator bool(BridgeStream stream)
-        {
-            return stream != null;
-        }
-
-        private void WriteBuffer(byte[] bytes)
+        private void WriteByteArray(byte[] bytes)
         {
             GrowBuffer(bytes.Length);
-            Array.Copy(bytes, 0, _buffer, _writeIndex, bytes.Length);
+            Buffer.BlockCopy(bytes, 0, _buffer, _writeIndex, bytes.Length);
             _writeIndex += bytes.Length;
-        }
-
-        private void WriteBuffer(byte data)
-        {
-            GrowBuffer(1);
-            _buffer[_writeIndex] = data;
-            _writeIndex += 1;
         }
 
         private void GrowBuffer(int length)
@@ -61,7 +47,6 @@ namespace GnarlyGames.Serializers
             {
                 var resizeBuffer = new byte[_capacity];
                 Buffer.BlockCopy(_buffer, 0, resizeBuffer, 0, _writeIndex);
-                // Array.Copy(_buffer, resizeBuffer, _writeIndex);
                 _buffer = resizeBuffer;
             }
         }
@@ -70,7 +55,7 @@ namespace GnarlyGames.Serializers
         {
             var bytes = Encoding.UTF8.GetBytes(value);
             Write(bytes.Length);
-            WriteBuffer(bytes);
+            WriteByteArray(bytes);
         }
 
         public unsafe void Write(int value)
@@ -83,14 +68,13 @@ namespace GnarlyGames.Serializers
             }
 
             _writeIndex += 4;
-
-            // var byteValue = BitConverter.GetBytes(value);
-            // WriteBuffer(byteValue);
         }
 
         public void Write(byte value)
         {
-            WriteBuffer(value);
+            GrowBuffer(1);
+            _buffer[_writeIndex] = value;
+            _writeIndex += 1;
         }
 
         public byte ReadByte()
@@ -100,10 +84,18 @@ namespace GnarlyGames.Serializers
             return value;
         }
 
-        public void Write(float value)
+        public unsafe void Write(float value)
         {
-            var byteValue = BitConverter.GetBytes(value);
-            WriteBuffer(byteValue);
+            GrowBuffer(4);
+
+            fixed (byte* bufferPointer = _buffer)
+            {
+                *(float*) (bufferPointer + _writeIndex) = value;
+            }
+
+            _writeIndex += 4;
+            // var byteValue = BitConverter.GetBytes(value);
+            // WriteBuffer(byteValue);
         }
 
         public void Write(int[] value)
@@ -146,15 +138,27 @@ namespace GnarlyGames.Serializers
         public byte[] Encode()
         {
             var finalArray = new byte[_writeIndex];
-            Array.Copy(_buffer, 0, finalArray, 0, _writeIndex);
+            Buffer.BlockCopy(_buffer, 0, finalArray, 0, _writeIndex);
             return finalArray;
         }
 
         public int ReadInt()
         {
-            var value = BitConverter.ToInt32(_buffer, _readIndex);
+            var value = ToInt(_buffer, _readIndex);
             _readIndex += 4;
             return value;
+        }
+
+        private int ToInt(byte[] buffer, int startIndex)
+        {
+            return buffer[startIndex] | (buffer[startIndex + 1] << 8) | (buffer[startIndex + 2] << 16) |
+                   (buffer[startIndex + 3] << 24);
+        }
+
+        private unsafe float ToFloat(byte[] buffer, int startIndex)
+        {
+            var val = ToInt(buffer, startIndex);
+            return *(float*) &val;
         }
 
         public int[] ReadIntArray()
@@ -207,7 +211,7 @@ namespace GnarlyGames.Serializers
 
         public float ReadFloat()
         {
-            var value = BitConverter.ToSingle(_buffer, _readIndex);
+            var value = ToFloat(_buffer, _readIndex);
             _readIndex += 4;
             return value;
         }
@@ -223,7 +227,7 @@ namespace GnarlyGames.Serializers
         public void Write(byte[] data)
         {
             Write(data.Length);
-            WriteBuffer(data);
+            WriteByteArray(data);
         }
 
         public void Write(Vector3 vector3)
@@ -282,7 +286,8 @@ namespace GnarlyGames.Serializers
 
         public void Clear()
         {
-            _buffer = new byte[_defaultCapacity];
+            _buffer = new byte[DefaultCapacity];
+            _capacity = DefaultCapacity;
             _writeIndex = 0;
             _readIndex = 0;
         }
@@ -328,6 +333,11 @@ namespace GnarlyGames.Serializers
         public bool ReadBool()
         {
             return ReadByte() == 1;
+        }
+
+        public static implicit operator bool(BridgeStream stream)
+        {
+            return stream != null;
         }
     }
 }

@@ -227,21 +227,6 @@ namespace PacketTest
         }
 
         [Test]
-        public void TestGrowBufferIncreasesCapacity()
-        {
-            _sendBridgeStream.Write(1);
-            _sendBridgeStream.Write(1);
-            _sendBridgeStream.Write(1);
-            _sendBridgeStream.Write(1);
-            _sendBridgeStream.Write(1);
-            _sendBridgeStream.Write(1);
-            _sendBridgeStream.Write(1);
-            _sendBridgeStream.Write(1);
-            _sendBridgeStream.Write(1);
-            Assert.AreEqual(32, _sendBridgeStream._capacity);
-        }
-
-        [Test]
         public void TestCustomTypeList()
         {
             var list = new List<MatchInfo>()
