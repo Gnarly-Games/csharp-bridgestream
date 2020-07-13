@@ -5,10 +5,10 @@
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
         <ProjectGuid>{D192B0EB-581B-4C30-8C3E-B445100004A6}</ProjectGuid>
-        <OutputType>Exe</OutputType>
+        <OutputType>Library</OutputType>
         <AppDesignerFolder>Properties</AppDesignerFolder>
-        <RootNamespace>PacketSystem</RootNamespace>
-        <AssemblyName>PacketSystem</AssemblyName>
+        <RootNamespace>GnarlyGames.Serializers</RootNamespace>
+        <AssemblyName>GnarlyGames.Serializers</AssemblyName>
         <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <LangVersion>7.3</LangVersion>
@@ -37,9 +37,13 @@
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
         <Reference Include="System.Xml" />
+        <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\..\..\..\..\Program Files\Unity\Hub\Editor\2019.4.1f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
-        <Compile Include="Packet.cs" />
+        <Compile Include="IBridgeSerializer.cs" />
+        <Compile Include="BridgeStream.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>

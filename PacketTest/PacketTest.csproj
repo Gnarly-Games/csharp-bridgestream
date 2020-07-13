@@ -42,19 +42,22 @@
         <Reference Include="System.Core" />
         <Reference Include="System.Data" />
         <Reference Include="System.Xml" />
+        <Reference Include="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+          <HintPath>..\..\..\..\..\Program Files\Unity\Hub\Editor\2019.4.1f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
     </ItemGroup>
     <ItemGroup>
         <Compile Include="Tests.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
     </ItemGroup>
     <ItemGroup>
-      <ProjectReference Include="..\PacketSystem\PacketSystem.csproj">
-        <Project>{d192b0eb-581b-4c30-8c3e-b445100004a6}</Project>
-        <Name>PacketSystem</Name>
-      </ProjectReference>
+      <None Include="packages.config" />
     </ItemGroup>
     <ItemGroup>
-      <None Include="packages.config" />
+      <ProjectReference Include="..\BridgeStream\BridgeStream.csproj">
+        <Project>{d192b0eb-581b-4c30-8c3e-b445100004a6}</Project>
+        <Name>BridgeStream</Name>
+      </ProjectReference>
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
     <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacketSystem", "PacketSystem\PacketSystem.csproj", "{D192B0EB-581B-4C30-8C3E-B445100004A6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BridgeStream", "BridgeStream\BridgeStream.csproj", "{D192B0EB-581B-4C30-8C3E-B445100004A6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PacketTest", "PacketTest\PacketTest.csproj", "{090A097A-5661-4FC0-A845-A4D5E4D0CA8B}"
 EndProject
