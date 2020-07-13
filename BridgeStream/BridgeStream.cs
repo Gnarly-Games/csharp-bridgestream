@@ -10,7 +10,7 @@ namespace GnarlyGames.Serializers
         private byte[] _buffer;
         private int _readIndex = 0;
         private int _writeIndex = 0;
-        private int _capacity = 16;
+        public int _capacity = 16;
         private const int _defaultCapacity = 16;
 
         public BridgeStream()
@@ -28,6 +28,11 @@ namespace GnarlyGames.Serializers
         public bool Empty => _buffer.Length == 0;
 
         public bool HasMore => _buffer.Length > _readIndex;
+
+        public static implicit operator bool(BridgeStream stream)
+        {
+            return stream != null;
+        }
 
         private void WriteBuffer(byte[] bytes)
         {
@@ -55,7 +60,8 @@ namespace GnarlyGames.Serializers
             if (isNeedResize)
             {
                 var resizeBuffer = new byte[_capacity];
-                Array.Copy(_buffer, resizeBuffer, _writeIndex);
+                Buffer.BlockCopy(_buffer, 0, resizeBuffer, 0, _writeIndex);
+                // Array.Copy(_buffer, resizeBuffer, _writeIndex);
                 _buffer = resizeBuffer;
             }
         }
@@ -67,10 +73,19 @@ namespace GnarlyGames.Serializers
             WriteBuffer(bytes);
         }
 
-        public void Write(int value)
+        public unsafe void Write(int value)
         {
-            var byteValue = BitConverter.GetBytes(value);
-            WriteBuffer(byteValue);
+            GrowBuffer(4);
+
+            fixed (byte* bufferPointer = _buffer)
+            {
+                *(int*) (bufferPointer + _writeIndex) = value;
+            }
+
+            _writeIndex += 4;
+
+            // var byteValue = BitConverter.GetBytes(value);
+            // WriteBuffer(byteValue);
         }
 
         public void Write(byte value)

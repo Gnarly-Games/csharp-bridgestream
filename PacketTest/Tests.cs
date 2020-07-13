@@ -227,6 +227,21 @@ namespace PacketTest
         }
 
         [Test]
+        public void TestGrowBufferIncreasesCapacity()
+        {
+            _sendBridgeStream.Write(1);
+            _sendBridgeStream.Write(1);
+            _sendBridgeStream.Write(1);
+            _sendBridgeStream.Write(1);
+            _sendBridgeStream.Write(1);
+            _sendBridgeStream.Write(1);
+            _sendBridgeStream.Write(1);
+            _sendBridgeStream.Write(1);
+            _sendBridgeStream.Write(1);
+            Assert.AreEqual(32, _sendBridgeStream._capacity);
+        }
+
+        [Test]
         public void TestCustomTypeList()
         {
             var list = new List<MatchInfo>()
@@ -317,6 +332,21 @@ namespace PacketTest
             }
 
             Assert.AreEqual(5, readCount);
+        }
+
+
+        [Test]
+        public void FalseIfNotAssignedTest()
+        {
+            BridgeStream stream = null;
+            Assert.IsFalse(stream);
+        }
+
+        [Test]
+        public void TrueIfAssignedTest()
+        {
+            BridgeStream stream = new BridgeStream();
+            Assert.IsTrue(stream);
         }
     }
 }
