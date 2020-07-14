@@ -218,9 +218,7 @@ namespace PacketTest
             var data = _sendBridgeStream.Encode();
 
             var receivePacket = new BridgeStream(data);
-            var returnMatchInfo = new MatchInfo();
-            receivePacket.Read(returnMatchInfo);
-
+            var returnMatchInfo = receivePacket.Read<MatchInfo>();
             Assert.AreEqual(matchInfo.matchId, returnMatchInfo.matchId);
             Assert.AreEqual(matchInfo.playerIds, returnMatchInfo.playerIds);
             Assert.AreEqual(matchInfo.playerNames, returnMatchInfo.playerNames);
@@ -245,17 +243,45 @@ namespace PacketTest
                 }
             };
 
-            _sendBridgeStream.WriteSerializerList(list);
+            _sendBridgeStream.WriteList(list);
             var data = _sendBridgeStream.Encode();
 
             var receivePacket = new BridgeStream(data);
-            var returnMatchInfo = new List<MatchInfo>();
-            receivePacket.ReadSerializerList(returnMatchInfo);
+            var returnMatchInfo = receivePacket.ReadList<MatchInfo>();
 
             Assert.AreEqual(list[0].matchId, returnMatchInfo[0].matchId);
             Assert.AreEqual(list[1].matchId, returnMatchInfo[1].matchId);
         }
 
+
+        [Test]
+        public void TestCustomTypeArray()
+        {
+            var array = new MatchInfo[2]
+            {
+                new MatchInfo()
+                {
+                    matchId = 10,
+                    playerIds = new List<int> {1, 2, 3},
+                    playerNames = new List<string> {"fer", "meh", "şek", "sek"}
+                },
+                new MatchInfo()
+                {
+                    matchId = 15,
+                    playerIds = new List<int> {1, 2, 3},
+                    playerNames = new List<string> {"fer", "meh", "şek", "sek"}
+                }
+            };
+
+            _sendBridgeStream.WriteArray(array);
+            var data = _sendBridgeStream.Encode();
+
+            var receivePacket = new BridgeStream(data);
+            var returnMatchInfo = receivePacket.ReadArray<MatchInfo>();
+
+            Assert.AreEqual(array[0].matchId, returnMatchInfo[0].matchId);
+            Assert.AreEqual(array[1].matchId, returnMatchInfo[1].matchId);
+        }
 
         [Test]
         public void TestPacket()

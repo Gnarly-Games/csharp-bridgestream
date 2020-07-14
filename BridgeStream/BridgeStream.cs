@@ -278,10 +278,13 @@ namespace GnarlyGames.Serializers
             Write(packet);
         }
 
-        public void Read(IBridgeSerializer bridgeSerializer)
+        public T Read<T>() where T : IBridgeSerializer, new()
         {
+            var returnObject = new T();
             var packet = ReadStream();
-            bridgeSerializer.Read(packet);
+            returnObject.Read(packet);
+
+            return returnObject;
         }
 
         public void Clear()
@@ -305,7 +308,29 @@ namespace GnarlyGames.Serializers
             return new Quaternion(ReadFloat(), ReadFloat(), ReadFloat(), ReadFloat());
         }
 
-        public void WriteSerializerList<T>(List<T> bridgeSerializer) where T : IBridgeSerializer
+        public void WriteArray<T>(T[] bridgeSerializer) where T : IBridgeSerializer
+        {
+            Write(bridgeSerializer.Length);
+            foreach (var serializer in bridgeSerializer)
+            {
+                Write(serializer);
+            }
+        }
+
+        public T[] ReadArray<T>() where T : IBridgeSerializer, new()
+        {
+            var length = ReadInt();
+            var array = new T[length];
+
+            for (var i = 0; i < length; i++)
+            {
+                array[i] = Read<T>();
+            }
+
+            return array;
+        }
+
+        public void WriteList<T>(List<T> bridgeSerializer) where T : IBridgeSerializer
         {
             Write(bridgeSerializer.Count);
             foreach (var serializer in bridgeSerializer)
@@ -314,15 +339,17 @@ namespace GnarlyGames.Serializers
             }
         }
 
-        public void ReadSerializerList<T>(List<T> data) where T : IBridgeSerializer, new()
+        public List<T> ReadList<T>() where T : IBridgeSerializer, new()
         {
             var length = ReadInt();
-            for (int i = 0; i < length; i++)
+            var list = new List<T>(length);
+
+            for (var i = 0; i < length; i++)
             {
-                var value = new T();
-                Read(value);
-                data.Add(value);
+                list.Add(Read<T>());
             }
+
+            return list;
         }
 
         public void Write(bool data)
