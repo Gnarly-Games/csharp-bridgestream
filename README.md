@@ -9,6 +9,7 @@ You can encode/decode primitive types, collection of primitives, custom serializ
 and efficiently.
 
 Check out the [python implementation](https://github.com/Gnarly-Games/python-bridgestream) if you need a slower language.
+
 Check out the [golang implementation](https://github.com/Gnarly-Games/golang-bridgestream) if ```go
 panic: runtime error: invalid memory address or nil pointer dereference```
 
