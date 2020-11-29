@@ -1,10 +1,9 @@
 ﻿using System.Collections.Generic;
 using GnarlyGames.Serializers;
 using NUnit.Framework;
-using NUnit.Framework.Internal;
 using UnityEngine;
 
-namespace PacketTest
+namespace BridgeStreamTest
 {
     public class MatchInfo : IBridgeSerializer
     {
@@ -219,6 +218,26 @@ namespace PacketTest
 
             var receivePacket = new BridgeStream(data);
             var returnMatchInfo = receivePacket.Read<MatchInfo>();
+            Assert.AreEqual(matchInfo.matchId, returnMatchInfo.matchId);
+            Assert.AreEqual(matchInfo.playerIds, returnMatchInfo.playerIds);
+            Assert.AreEqual(matchInfo.playerNames, returnMatchInfo.playerNames);
+        }
+
+        [Test]
+        public void TestCustomTypeWithTypeOf()
+        {
+            var matchInfo = new MatchInfo()
+            {
+                matchId = 10,
+                playerIds = new List<int> {1, 2, 3},
+                playerNames = new List<string> {"fer", "meh", "şek", "sek"}
+            };
+
+            _sendBridgeStream.Write(matchInfo);
+            var data = _sendBridgeStream.Encode();
+
+            var receivePacket = new BridgeStream(data);
+            var returnMatchInfo = (MatchInfo) receivePacket.Read(typeof(MatchInfo));
             Assert.AreEqual(matchInfo.matchId, returnMatchInfo.matchId);
             Assert.AreEqual(matchInfo.playerIds, returnMatchInfo.playerIds);
             Assert.AreEqual(matchInfo.playerNames, returnMatchInfo.playerNames);

@@ -286,6 +286,16 @@ namespace GnarlyGames.Serializers
 
             return returnObject;
         }
+        
+        
+        public IBridgeSerializer Read(Type type)
+        {
+            var returnObject = (IBridgeSerializer) Activator.CreateInstance(type);
+            var packet = ReadStream();
+            returnObject.Read(packet);
+            return returnObject;
+        }
+
 
         public void Clear()
         {
